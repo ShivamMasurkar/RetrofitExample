@@ -18,9 +18,9 @@ class MainActivity : AppCompatActivity() {
 
         val recyclerView=findViewById<RecyclerView>(R.id.myRecyclerView)
         val serviceGenerator=ServiceGenerator.buildService(ApiService::class.java)
-        val call=serviceGenerator.getPosts()
+        val recall=serviceGenerator.getPosts()
 
-        call.enqueue(object: Callback<MutableList<PostModel>>{
+        recall.enqueue(object: Callback<MutableList<PostModel>>{
             override fun onResponse(
                 call: Call<MutableList<PostModel>>,
                 response: Response<MutableList<PostModel>>
